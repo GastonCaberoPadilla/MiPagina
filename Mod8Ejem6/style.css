@@ -1,0 +1,202 @@
+/* ===============================
+   RESET
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY / APP
+   =============================== */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: #f8fafc;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* ===============================
+   CLOCK CARD
+   =============================== */
+.clock-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-radius: 30px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.greeting {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #c7d2fe;
+    margin-bottom: 1.8rem;
+}
+
+/* ===============================
+   TIME
+   =============================== */
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.time {
+    font-size: 4.8rem;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.period {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a5b4fc;
+}
+
+/* Pulso suave */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* ===============================
+   DATE
+   =============================== */
+.date {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 1.8rem;
+}
+
+/* ===============================
+   CONTROLS
+   =============================== */
+.controls {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    padding: 0.9rem 2rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+/* ===============================
+   TIMEZONE
+   =============================== */
+.timezone-info {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+#timezone {
+    font-family: 'Courier New', monospace;
+    color: #e0e7ff;
+}
+
+/* ===============================
+   STATS
+   =============================== */
+.stats-grid {
+    width: 100%;
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    color: #c7d2fe;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+    .time {
+        font-size: 3.2rem;
+    }
+
+    .period {
+        font-size: 1.4rem;
+    }
+
+    .clock-card {
+        padding: 2rem;
+    }
+}

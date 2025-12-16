@@ -1,0 +1,163 @@
+/* ===============================
+   RESET
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY / APP
+   =============================== */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ===============================
+   GAME CARD
+   =============================== */
+.game-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 2.2rem;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.game-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.game-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-top: 0.3rem;
+}
+
+/* ===============================
+   INFO
+   =============================== */
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.8rem;
+    border-radius: 14px;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.value {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Botón reset */
+.btn-reset {
+    grid-column: span 3;
+    padding: 0.8rem;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: white;
+    margin-top: 0.5rem;
+}
+
+/* ===============================
+   BOARD
+   =============================== */
+.board-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    width: 100%;
+    max-width: 420px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.card {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(145deg, #020617, #0f172a);
+    border-radius: 16px;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition: transform 0.35s ease, background 0.3s ease;
+    user-select: none;
+}
+
+/* Revelada */
+.card.revealed {
+    background: linear-gradient(145deg, #22c55e, #16a34a);
+    transform: rotateY(0deg);
+}
+
+/* Emparejada */
+.card.matched {
+    background: linear-gradient(145deg, #3b82f6, #2563eb);
+    cursor: default;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-reset {
+        grid-column: span 1;
+    }
+
+    .card {
+        font-size: 1.8rem;
+    }
+}

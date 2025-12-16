@@ -1,0 +1,208 @@
+/* ===============================
+   RESET
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   APP / BODY
+   =============================== */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.counter-card {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-radius: 26px;
+    padding: 2.2rem;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.counter-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+/* ===============================
+   DISPLAY
+   =============================== */
+.contador-display {
+    padding: 2.2rem;
+    border-radius: 18px;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: background 0.3s ease;
+}
+
+.numero {
+    font-size: 4.5rem;
+    font-weight: 800;
+    display: block;
+}
+
+/* Estados */
+.numero.positivo {
+    color: #22c55e;
+}
+
+.numero.negativo {
+    color: #ef4444;
+}
+
+.numero.neutro {
+    color: #e5e7eb;
+}
+
+.bg-positivo {
+    background: rgba(34, 197, 94, 0.15);
+}
+
+.bg-negativo {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+.bg-neutro {
+    background: rgba(148, 163, 184, 0.12);
+}
+
+/* ===============================
+   BOTONES
+   =============================== */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    padding: 1.2rem;
+    border-radius: 14px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.icono {
+    font-size: 1.5rem;
+}
+
+/* Variantes */
+.btn-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #64748b, #475569);
+}
+
+/* ===============================
+   BONUS
+   =============================== */
+.botones-bonus {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.btn-small {
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.15s ease;
+}
+
+.btn-small:active {
+    transform: scale(0.95);
+}
+
+.btn-success-light {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+.btn-danger-light {
+    background: linear-gradient(135deg, #ef4444, #fb7185);
+}
+
+/* ===============================
+   INFO
+   =============================== */
+.info {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.info strong {
+    color: #f8fafc;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+    .numero {
+        font-size: 3.5rem;
+    }
+
+    .botones {
+        grid-template-columns: 1fr;
+    }
+}

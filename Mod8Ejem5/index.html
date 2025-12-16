@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Colores</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="color-card">
+
+            <!-- HEADER -->
+            <header class="color-header">
+                <h1>🎨 Generador de Colores</h1>
+                <p class="subtitle">Explora colores aleatorios y guarda tus favoritos</p>
+            </header>
+
+            <!-- DISPLAY PRINCIPAL -->
+            <section class="color-display">
+                <div class="color-code" id="colorCode">#667EEA</div>
+
+                <div class="color-values">
+                    <div class="value-box">
+                        <span class="label">RGB</span>
+                        <span id="rgbValue">rgb(102, 126, 234)</span>
+                    </div>
+                    <div class="value-box">
+                        <span class="label">HSL</span>
+                        <span id="hslValue">hsl(228, 76%, 66%)</span>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-generate" id="generateBtn">
+                        Generar color
+                    </button>
+                    <button class="btn btn-copy" id="copyBtn">
+                        Copiar código
+                    </button>
+                </div>
+            </section>
+
+            <!-- HISTORIAL -->
+            <section class="history-section">
+                <h2>Historial</h2>
+                <div class="history-grid" id="historyGrid"></div>
+                <button class="btn btn-clear" id="clearHistory">
+                    Limpiar historial
+                </button>
+            </section>
+
+            <!-- INFO -->
+            <footer class="instructions">
+                <p>💡 Presiona la <strong>barra espaciadora</strong> para generar un nuevo color</p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">✓ Código copiado</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Tema</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <h1>🌓 Cambio de Tema</h1>
+
+            <button id="themeToggle" class="theme-toggle">
+                <span class="icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- CONTENIDO -->
+        <section class="content">
+
+            <article class="card intro-card">
+                <h2>Modo Oscuro / Claro</h2>
+                <p>
+                    Ejemplo práctico de cómo implementar un cambio de tema usando
+                    <strong>JavaScript</strong> y <strong>CSS Variables</strong>.
+                </p>
+            </article>
+
+            <article class="card features-card">
+                <div class="feature">
+                    <span class="emoji">💾</span>
+                    <h3>Persistencia</h3>
+                    <p>Tu preferencia se guarda en localStorage</p>
+                </div>
+
+                <div class="feature">
+                    <span class="emoji">🎨</span>
+                    <h3>Transiciones</h3>
+                    <p>Cambios suaves entre temas</p>
+                </div>
+
+                <div class="feature">
+                    <span class="emoji">⚡</span>
+                    <h3>Rápido</h3>
+                    <p>Cambio instantáneo con un clic</p>
+                </div>
+            </article>
+
+            <article class="card code-card">
+                <h2>Código de Ejemplo</h2>
+                <pre><code>// JavaScript para cambiar tema
+const toggleTheme = () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem(
+        'theme',
+        document.body.classList.contains('dark-mode')
+            ? 'dark'
+            : 'light'
+    );
+};</code></pre>
+            </article>
+
+            <section class="stats">
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>JavaScript Puro</p>
+                </div>
+                <div class="stat">
+                    <h3>CSS</h3>
+                    <p>Variables</p>
+                </div>
+                <div class="stat">
+                    <h3>🚀</h3>
+                    <p>Fácil de implementar</p>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>Presiona el botón superior para alternar el tema</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

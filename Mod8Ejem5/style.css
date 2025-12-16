@@ -1,0 +1,236 @@
+/* ===============================
+   RESET
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY / APP
+   =============================== */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    transition: background-color 0.5s ease;
+    color: #f8fafc;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.color-card {
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 2.4rem;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.color-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.color-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-top: 0.4rem;
+}
+
+/* ===============================
+   DISPLAY
+   =============================== */
+.color-display {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.color-code {
+    font-size: 2.6rem;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   VALUES
+   =============================== */
+.color-values {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.value-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.7rem 1.2rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.9rem 1.6rem;
+    border-radius: 14px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-generate {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-copy {
+    background: transparent;
+    border: 2px solid #6366f1;
+    color: #c7d2fe;
+}
+
+.btn-copy:hover {
+    background: #6366f1;
+    color: white;
+}
+
+/* ===============================
+   HISTORY
+   =============================== */
+.history-section {
+    margin-bottom: 2rem;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.history-item {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.history-item:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   CLEAR
+   =============================== */
+.btn-clear {
+    width: 100%;
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: white;
+}
+
+/* ===============================
+   INFO
+   =============================== */
+.instructions {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* ===============================
+   TOAST
+   =============================== */
+.toast {
+    position: fixed;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    bottom: 2rem;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+    .color-code {
+        font-size: 2rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

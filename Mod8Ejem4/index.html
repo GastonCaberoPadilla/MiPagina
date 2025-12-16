@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Formulario</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="form-card">
+
+            <!-- HEADER -->
+            <header class="form-header">
+                <h1>📝 Registro de Usuario</h1>
+                <p class="subtitle">Validación en tiempo real con JavaScript</p>
+            </header>
+
+            <!-- FORMULARIO -->
+            <form id="registrationForm" novalidate>
+
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario *</label>
+                    <input type="text" id="username" name="username" placeholder="Mínimo 3 caracteres">
+                    <span class="success-icon">✓</span>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                    <span class="success-icon">✓</span>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+                    <span class="success-icon">✓</span>
+                    <span class="error-message"></span>
+
+                    <div class="password-requirements">
+                        <p class="requirement" id="req-length">
+                            <span class="req-icon"></span> Mínimo 8 caracteres
+                        </p>
+                        <p class="requirement" id="req-uppercase">
+                            <span class="req-icon"></span> Una mayúscula
+                        </p>
+                        <p class="requirement" id="req-number">
+                            <span class="req-icon"></span> Un número
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="Repite la contraseña">
+                    <span class="success-icon">✓</span>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Edad *</label>
+                    <input type="number" id="age" name="age" placeholder="Mayor de 18 años">
+                    <span class="success-icon">✓</span>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">Acepto los términos y condiciones *</label>
+                    <span class="error-message"></span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn" disabled>
+                    Registrarse
+                </button>
+
+                <div class="form-summary" id="formSummary"></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

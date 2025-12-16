@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TechStartup – Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span>TechStartup</span>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a class="active"><i class="bi bi-grid"></i> Dashboard</a>
+                <a><i class="bi bi-people"></i> Usuarios</a>
+                <a><i class="bi bi-graph-up"></i> Reportes</a>
+                <a><i class="bi bi-credit-card"></i> Ventas</a>
+                <a><i class="bi bi-gear"></i> Configuración</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <h1>Resumen General</h1>
+                <div class="topbar-actions">
+                    <i class="bi bi-bell"></i>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-title">Ingresos</span>
+                    <span class="stat-value">$72,450</span>
+                    <span class="stat-trend up">+18%</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-title">Usuarios Activos</span>
+                    <span class="stat-value">3,284</span>
+                    <span class="stat-trend up">+6%</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-title">Conversiones</span>
+                    <span class="stat-value">4.9%</span>
+                    <span class="stat-trend down">-1.2%</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-title">Tickets Abiertos</span>
+                    <span class="stat-value">27</span>
+                    <span class="stat-trend neutral">Estable</span>
+                </div>
+            </section>
+
+            <section class="content-grid">
+
+                <div class="panel chart-panel">
+                    <h5>Rendimiento Mensual</h5>
+                    <svg viewBox="0 0 400 160">
+                        <polyline fill="none" stroke="#6366f1" stroke-width="3"
+                            points="0,120 50,100 100,110 150,70 200,80 250,50 300,60 350,30 400,40" />
+                        <line x1="0" y1="140" x2="400" y2="140" stroke="#334155" />
+                    </svg>
+                </div>
+
+                <div class="panel activity-panel">
+                    <h5>Actividad Reciente</h5>
+                    <ul class="activity-list">
+                        <li>
+                            <i class="bi bi-cart-check"></i>
+                            Nueva venta registrada
+                            <span>$320</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-person-plus"></i>
+                            Usuario nuevo
+                            <span>Juan Pérez</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-arrow-repeat"></i>
+                            Plan actualizado
+                            <span>Pro</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="panel table-panel">
+                <h5>Últimas Transacciones</h5>
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Estado</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1041</td>
+                            <td>Ana López</td>
+                            <td class="text-success">Completado</td>
+                            <td>$540</td>
+                        </tr>
+                        <tr>
+                            <td>#1040</td>
+                            <td>Carlos Ruiz</td>
+                            <td class="text-warning">Pendiente</td>
+                            <td>$210</td>
+                        </tr>
+                        <tr>
+                            <td>#1039</td>
+                            <td>Empresa Nova</td>
+                            <td class="text-danger">Cancelado</td>
+                            <td>$120</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
